@@ -1,25 +1,195 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Pressable } from "react-native";
-
+import {
+  StyleSheet,
+  Text,
+  View,
+  Pressable,
+  Image,
+  ScrollView,
+} from "react-native";
+import { AntDesign } from "@expo/vector-icons";
 export default function App() {
   return (
-    <View style={styles.container}>
-      <View style={{ padding: 5, marginLeft: 5 }}>
-        <Text style={{ color: "purple", fontSize: 16, fontWeight: "700" }}>
-          Mid-back (right)
-        </Text>
-        <Text
+    <ScrollView style={styles.container}>
+      <View>
+        <Pressable
           style={{
-            color: "black",
-            fontSize: 16,
-            fontWeight: "700",
-            marginTop: 4,
-            marginBottom: 3,
+            backgroundColor: "#E6E6FA",
+            flexDirection: "row",
+            alignItems: "center",
+            padding: 10,
+            margin: 10,
           }}
         >
-          Aching, Stabbing
-        </Text>
+          <AntDesign name="left" size={24} color="#33006F" />
+          <Text
+            style={{
+              textAlign: "center",
+              marginLeft: "auto",
+              marginRight: "auto",
+              fontWeight: "bold",
+              color: "purple",
+            }}
+          >
+            Worst Pain
+          </Text>
+        </Pressable>
       </View>
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+          marginBottom: 8,
+          marginTop: 5,
+        }}
+      >
+        <Text
+          style={{
+            marginLeft: 10,
+            zIndex: 3,
+            padding: 4,
+            width: 20,
+            height: 20,
+            borderRadius: 10,
+            marginHorizontal: 15,
+            color: "black",
+            textAlign: "center",
+            backgroundColor: "#1d1160",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        ></Text>
+
+        <Text
+          style={{
+            marginLeft: 10,
+            marginHorizontal: 15,
+            zIndex: 3,
+            padding: 4,
+            width: 20,
+            height: 20,
+            borderRadius: 10,
+            color: "black",
+            textAlign: "center",
+            backgroundColor: "#1d1160",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        ></Text>
+
+        <Text
+          style={{
+            marginLeft: 10,
+            zIndex: 3,
+            padding: 4,
+            marginHorizontal: 15,
+            width: 20,
+            height: 20,
+            borderRadius: 10,
+            color: "black",
+            textAlign: "center",
+            backgroundColor: "#E6E6FA",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        ></Text>
+
+        <Text
+          style={{
+            marginLeft: 10,
+            zIndex: 3,
+            padding: 4,
+            width: 20,
+            marginHorizontal: 15,
+            height: 20,
+            borderRadius: 10,
+            color: "black",
+            textAlign: "center",
+            backgroundColor: "#E6E6FA",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        ></Text>
+
+        <Text
+          style={{
+            marginLeft: 10,
+            zIndex: 3,
+            padding: 4,
+            width: 20,
+            height: 20,
+            marginHorizontal: 15,
+            borderRadius: 10,
+            color: "black",
+            textAlign: "center",
+            backgroundColor: "#E6E6FA",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        ></Text>
+
+        <Text
+          style={{
+            marginLeft: 10,
+            zIndex: 3,
+            padding: 4,
+            width: 20,
+            height: 20,
+            borderRadius: 10,
+            color: "black",
+            textAlign: "center",
+            backgroundColor: "#E6E6FA",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        ></Text>
+      </View>
+      <Text
+        style={{
+          height: 3,
+          width: 240,
+          borderColor: "#1d1160",
+          borderWidth: 2,
+          // position:"absolute",
+          bottom: 19,
+          left: 80,
+        }}
+      ></Text>
+      <View
+        style={{
+          padding: 5,
+          margin: 5,
+          flexDirection: "row",
+          alignItems: "center",
+        }}
+      >
+        <View style={{}}>
+          <Image
+            style={{ width: 50, height: 50, resizeMode: "contain" }}
+            source={{
+              uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP7PThb74NpNHj67-PmAsVmmKR08kemhyEPA&usqp=CAU",
+            }}
+          />
+        </View>
+        <View style={{ marginLeft: 10 }}>
+          <Text style={{ color: "purple", fontSize: 16, fontWeight: "700" }}>
+            Mid-back (right)
+          </Text>
+          <Text
+            style={{
+              color: "black",
+              fontSize: 16,
+              fontWeight: "700",
+              marginTop: 4,
+              marginBottom: 3,
+            }}
+          >
+            Aching, Stabbing
+          </Text>
+        </View>
+      </View>
+
       <Text
         style={{
           height: 1,
@@ -347,7 +517,7 @@ export default function App() {
       </Pressable>
       <View
         style={{
-          height: "55%",
+          height: "54%",
           borderColor: "purple",
           borderWidth: 4,
           borderRadius: 4,
@@ -355,7 +525,7 @@ export default function App() {
           backgroundColor: "purple",
           position: "absolute",
           left: 21,
-          top: 154,
+          top: 270,
           zIndex: -10,
         }}
       />
@@ -364,7 +534,7 @@ export default function App() {
       >
         <Text style={{ textAlign: "center", color: "white" }}>Next</Text>
       </Pressable>
-    </View>
+    </ScrollView>
   );
 }
 
